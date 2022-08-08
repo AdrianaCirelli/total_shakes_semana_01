@@ -1,8 +1,16 @@
 package produto;
 
 public enum TipoTamanho {
-    //IMPLEMENTE A LOGICA DO ENUM
-    //TODO
-    public final double multiplicador;
+    P ("Pequeno"), M ("Medio"), G("Grande");
+
+    private String tamanho;
+
+    TipoTamanho(String tamanho) {
+        this.tamanho = tamanho;
+    }
+
+    public String getTamanho() {
+        return  tamanho;
+    }
 
 }
