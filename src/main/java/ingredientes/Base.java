@@ -12,6 +12,8 @@ public class Base implements Ingrediente,Comparable<Ingrediente>{
         return this.tipoBase;
     }
 
+
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -21,7 +23,6 @@ public class Base implements Ingrediente,Comparable<Ingrediente>{
 
         return tipoBase == base.tipoBase;
     }
-
 
     //É necessário consertar o compareTo, para imprimir na ordem correta.
     @Override
