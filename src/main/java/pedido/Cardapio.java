@@ -16,24 +16,22 @@ public class Cardapio {
         return this.precos;
     }
 
-    public void adicionarIngrediente(Ingrediente ingrediente,Double preco){
+    public void adicionarIngrediente(Ingrediente ingrediente,Double preco) {
 
         //validação
-        if(preco <= 0){
+        if (preco <= 0) {
             throw new IllegalArgumentException("Não é possível adicionar preços com valores negativos");
         }
         //chamando a TreeMap
         this.precos.put(ingrediente, preco);
-
     }
-
     public boolean atualizarIngrediente(Ingrediente ingrediente,Double preco){
-       //TODO
+        //TODO
         return true;
     }
 
     public boolean removerIngrediente(Ingrediente ingrediente){
-       //TODO
+        //TODO
         return true;
     }
 
