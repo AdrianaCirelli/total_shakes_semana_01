@@ -2,6 +2,7 @@ package pedido;
 
 import ingredientes.Ingrediente;
 
+import java.util.HashMap;
 import java.util.TreeMap;
 
 public class Cardapio {
@@ -16,7 +17,14 @@ public class Cardapio {
     }
 
     public void adicionarIngrediente(Ingrediente ingrediente,Double preco){
-        //TODO
+
+        //validação
+        if(preco <= 0){
+            throw new IllegalArgumentException("Não é possível adicionar preços com valores negativos");
+        }
+        //chamando a TreeMap
+        this.precos.put(ingrediente, preco);
+
     }
 
     public boolean atualizarIngrediente(Ingrediente ingrediente,Double preco){

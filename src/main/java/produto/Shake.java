@@ -2,6 +2,8 @@ package produto;
 
 import ingredientes.*;
 
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 public class Shake {
@@ -12,8 +14,6 @@ public class Shake {
     private TipoTamanho  tipoTamanho;
 
     //constructors
-
-
     public Shake(Base base, Fruta fruta, Topping topping, TipoTamanho tipoTamanho) {
         this.base = base;
         this.fruta = fruta;
@@ -41,6 +41,8 @@ public class Shake {
     public TipoTamanho getTipoTamanho() {
         return tipoTamanho;
     }
+
+
 
     @Override
     public String toString() {
