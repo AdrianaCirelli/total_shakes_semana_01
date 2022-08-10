@@ -1,6 +1,6 @@
 package ingredientes;
 
-public  class Fruta  implements Adicional,Comparable<Ingrediente>{
+public  class Fruta  implements Adicional, Ingrediente, Comparable<Ingrediente>{
      private TipoFruta tipoFruta;
 
      public Fruta(TipoFruta tipoFruta) {

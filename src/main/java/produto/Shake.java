@@ -1,8 +1,13 @@
 package produto;
 
-import ingredientes.*;
+import ingredientes.Adicional;
+import ingredientes.Base;
+import ingredientes.Fruta;
+import ingredientes.Topping;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Shake {
     private Base base;
@@ -11,15 +16,25 @@ public class Shake {
     private List<Adicional> adicionais;
     private TipoTamanho  tipoTamanho;
 
+
+
     //constructors
 
+    public Shake(Base base, Fruta fruta, Topping topping, List<Adicional> adicionais, TipoTamanho tipoTamanho) {
+        this.base = base;
+        this.fruta = fruta;
+        this.topping = topping;
+        this.adicionais = adicionais.stream().sorted().collect(Collectors.toList());
+        this.tipoTamanho = tipoTamanho;
+    }
     public Shake(Base base, Fruta fruta, Topping topping, TipoTamanho tipoTamanho) {
         this.base = base;
         this.fruta = fruta;
         this.topping = topping;
-        this.adicionais = adicionais;
+        this.adicionais = new ArrayList<>(0);
         this.tipoTamanho = tipoTamanho;
     }
+
 
     public Base getBase() {
         return base;
@@ -45,6 +60,8 @@ public class Shake {
 
     @Override
     public String toString() {
-        return this.base.getTipoBase().toString() + " / " + this.fruta.getTipoFruta().toString() + " / " + this.topping.getTipoTopping().toString() + " / " + this.adicionais + " / " + this.tipoTamanho.toString();
+        return this.base.getTipoBase().toString() + " / " +
+                this.fruta.getTipoFruta().toString() + " / " + this.topping.getTipoTopping().toString() + " / " +
+                this.adicionais + " / " + this.tipoTamanho.toString();
     }
 }
