@@ -10,9 +10,9 @@ public enum TipoTamanho {
         if(tamanho == TipoTamanho.P) {
             return 1.0;
         } else if (tamanho == TipoTamanho.M) {
-            return 2.0;
+            return 1.30;
         } else {
-            return 3.0;
+            return 1.50;
         }
     }
 

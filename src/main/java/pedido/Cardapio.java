@@ -26,7 +26,7 @@ public class Cardapio {
         this.precos.put(ingrediente, preco);
     }
     public boolean atualizarIngrediente(Ingrediente ingrediente,Double preco){
-        if (preco.doubleValue() > 0){
+        if (preco > 0){
             if(precos.containsKey(ingrediente)) {
                 this.precos.put(ingrediente, preco);
             } else {
@@ -40,16 +40,15 @@ public class Cardapio {
         return true;
     }
 
-    public boolean removerIngrediente(Ingrediente ingrediente){
-        if(precos.containsKey(ingrediente)) {
-            precos.remove(ingrediente);
-        } else {
-            throw new IllegalArgumentException("Ingrediente nao existe no cardapio.");
+        public boolean removerIngrediente(Ingrediente ingrediente){
+            if(precos.containsKey(ingrediente)) {
+                precos.remove(ingrediente);
+            } else {
+                throw new IllegalArgumentException("Ingrediente nao existe no cardapio.");
+            }
+
+            return true;
         }
-
-        return true;
-    }
-
     public Double buscarPreco(Ingrediente ingrediente){
         if(precos.containsKey(ingrediente)) {
             return this.precos.get(ingrediente);
