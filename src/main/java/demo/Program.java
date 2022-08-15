@@ -30,7 +30,7 @@ public class Program {
         cardapio.adicionarIngrediente(mel,1.0);
         cardapio.adicionarIngrediente(aveia, 3.0);
 
-        Shake shake1 = new Shake(sorvete,banana,mel, TipoTamanho.P);
+        Shake shake1 = new Shake(sorvete, banana, mel, TipoTamanho.P);
 
         ItemPedido itemPedido1 = new ItemPedido(shake1,1);
         Pedido pedido1 = new Pedido(1, new ArrayList<>(List.of(itemPedido1)),cliente);
@@ -76,6 +76,7 @@ public class Program {
         System.out.println(pedido3);
         System.out.println(pedido3.calcularTotal(cardapio));
 
+
         Shake shake4 = new Shake(iogurte, morango, mel, new ArrayList<>(List.of(banana, morango)), TipoTamanho.P);
         ItemPedido itemPedido4 = new ItemPedido(shake4, 2);
         pedido3.adicionarItemPedido(itemPedido4);
@@ -84,6 +85,7 @@ public class Program {
 
         System.out.println("::::: Serializando Cliente 1 e Desserializando Cliente 1");
         cliente.serializarCliente();
+
         Cliente cliente2 = Cliente.desserializarCliente(1);
         System.out.println(cliente2);
         System.out.println(cliente.equals(cliente2));
