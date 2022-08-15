@@ -5,8 +5,7 @@ import ingredientes.Base;
 import ingredientes.Fruta;
 import ingredientes.Topping;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class Shake {
@@ -15,10 +14,6 @@ public class Shake {
     private Topping topping;
     private List<Adicional> adicionais;
     private TipoTamanho  tipoTamanho;
-
-
-
-    //constructors
 
     public Shake(Base base, Fruta fruta, Topping topping, List<Adicional> adicionais, TipoTamanho tipoTamanho) {
         this.base = base;
@@ -31,8 +26,9 @@ public class Shake {
         this.base = base;
         this.fruta = fruta;
         this.topping = topping;
-        this.adicionais = new ArrayList<>(0);
+        this.adicionais = Collections.emptyList();
         this.tipoTamanho = tipoTamanho;
+
     }
 
 

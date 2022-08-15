@@ -1,28 +1,11 @@
 package produto;
 
 public enum TipoTamanho {
-    P ("Pequeno"), M ("Medio"), G("Grande");
+    P (1.0), M(1.3), G(1.5);
 
-    private final String tamanho;
+    public final double multiplicador;
 
-    //multiplicador
-    public final double multiplicador(TipoTamanho tamanho) {
-        if(tamanho == TipoTamanho.P) {
-            return 1.0;
-        } else if (tamanho == TipoTamanho.M) {
-            return 1.30;
-        } else {
-            return 1.50;
-        }
+    TipoTamanho(final double multiplicador) {
+        this.multiplicador = multiplicador;
     }
-
-    TipoTamanho(String tamanho) {
-        this.tamanho = tamanho;
-    }
-
-    public String getTamanho() {
-
-        return  tamanho;
-    }
-
 }
