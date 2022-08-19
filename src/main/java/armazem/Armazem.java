@@ -7,7 +7,6 @@ import java.util.TreeMap;
 
 public class Armazem {
     private Map<Ingrediente, Integer> estoque;
-
     public Armazem() {
         this.estoque = new TreeMap<>();
     }
@@ -40,16 +39,27 @@ public class Armazem {
         if (ingredienteExiste(ingrediente)) {
             estoque.put(ingrediente, quantidade);
         }
-    //TODO
         // Criar uma validação de quantidade para verificar se é negativo
+        if(quantidade >= 0){
+            estoque.put(ingrediente, quantidade);
+        } else {
+            throw new IllegalArgumentException("Quantidade invalida.");
+        }
     }
 
     public void reduzirQuantidadeDoIngredienteEmEstoque(Ingrediente ingrediente, Integer quantidade) {
         if(ingredienteExiste(ingrediente)){
             estoque.replace(ingrediente, quantidade, quantidade - quantidade);
         }
-    //TODO
-        //verificação: o que está em estoque tem que ser maior do que o que está mandando | Verificar se a segunda quantidade é <= a primeira quantidade
+        //verificação: o que está em estoque tem que ser maior
+        // do que o que está mandando | Verificar se a
+        // segunda quantidade é <= a primeira quantidade
+
+        if(quantidade >= 0){
+            estoque.replace(ingrediente, quantidade,quantidade - quantidade);
+        }else{
+            throw  new IllegalArgumentException("Estoque invalido.");
+        }
     }
 
     public int consultarQuantidadeDoIngredienteEmEstoque(Ingrediente ingrediente) {

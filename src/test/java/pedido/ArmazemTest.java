@@ -56,8 +56,6 @@ public class ArmazemTest {
 
     }
 
-
-
     @Test
     public void test_descadastrar_ingrediente_estoque_ingrediente_nao_existente() throws IllegalArgumentException{
 
@@ -70,8 +68,6 @@ public class ArmazemTest {
         assertEquals(exception.getMessage(), "Ingrediente nao encontrado.");
 
     }
-
-
 
     @Test
     public void test_adicionar_quantidade_ingrediente_estoque(){
