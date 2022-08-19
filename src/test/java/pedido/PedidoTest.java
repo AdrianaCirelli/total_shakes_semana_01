@@ -9,7 +9,6 @@ import produto.Shake;
 import produto.TipoTamanho;
 
 import java.util.ArrayList;
-import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.fail;
@@ -46,7 +45,6 @@ public class PedidoTest{
         Shake shake = new Shake(new Base(TipoBase.Sorvete),
                 new Fruta(TipoFruta.Morango),
                 new Topping(TipoTopping.Mel),
-                new ArrayList<>(List.of(new Fruta(TipoFruta.Banana), new Topping(TipoTopping.Aveia))),
                 TipoTamanho.P
         );
 
@@ -97,14 +95,12 @@ public class PedidoTest{
         Shake shake = new Shake(new Base(TipoBase.Sorvete),
                 new Fruta(TipoFruta.Morango),
                 new Topping(TipoTopping.Mel),
-                new ArrayList<>(List.of(new Fruta(TipoFruta.Banana), new Topping(TipoTopping.Aveia))),
                 TipoTamanho.P
         );
 
         Shake shake2 = new Shake(new Base(TipoBase.Sorvete),
                 new Fruta(TipoFruta.Morango),
                 new Topping(TipoTopping.Mel),
-                new ArrayList<>(List.of(new Fruta(TipoFruta.Banana), new Topping(TipoTopping.Mel))),
                 TipoTamanho.P
         );
 
@@ -124,7 +120,6 @@ public class PedidoTest{
         Shake shake = new Shake(new Base(TipoBase.Sorvete),
                 new Fruta(TipoFruta.Morango),
                 new Topping(TipoTopping.Mel),
-                new ArrayList<>(List.of(new Fruta(TipoFruta.Banana), new Topping(TipoTopping.Aveia))),
                 TipoTamanho.P
         );
 
@@ -141,14 +136,12 @@ public class PedidoTest{
         Shake shake = new Shake(new Base(TipoBase.Sorvete),
                 new Fruta(TipoFruta.Morango),
                 new Topping(TipoTopping.Mel),
-                new ArrayList<>(List.of(new Fruta(TipoFruta.Banana), new Topping(TipoTopping.Aveia))),
                 TipoTamanho.P
         );
 
         Shake shakeRemovido = new Shake(new Base(TipoBase.Sorvete),
                 new Fruta(TipoFruta.Morango),
                 new Topping(TipoTopping.Mel),
-                new ArrayList<>(List.of(new Topping(TipoTopping.Aveia), new Fruta(TipoFruta.Banana))),
                 TipoTamanho.P
         );
 
@@ -167,14 +160,12 @@ public class PedidoTest{
         Shake shake = new Shake(new Base(TipoBase.Sorvete),
                 new Fruta(TipoFruta.Morango),
                 new Topping(TipoTopping.Mel),
-                new ArrayList<>(List.of(new Fruta(TipoFruta.Banana), new Topping(TipoTopping.Aveia))),
                 TipoTamanho.P
         );
 
         Shake shakeRemovido = new Shake(new Base(TipoBase.Sorvete),
                 new Fruta(TipoFruta.Morango),
                 new Topping(TipoTopping.Mel),
-                new ArrayList<>(List.of(new Topping(TipoTopping.Aveia), new Fruta(TipoFruta.Banana))),
                 TipoTamanho.P
         );
 
@@ -192,14 +183,12 @@ public class PedidoTest{
         Shake shake = new Shake(new Base(TipoBase.Sorvete),
                 new Fruta(TipoFruta.Morango),
                 new Topping(TipoTopping.Mel),
-                new ArrayList<>(List.of(new Fruta(TipoFruta.Banana), new Topping(TipoTopping.Aveia))),
                 TipoTamanho.P
         );
 
         Shake shakeRemovido = new Shake(new Base(TipoBase.Sorvete),
                 new Fruta(TipoFruta.Morango),
                 new Topping(TipoTopping.Aveia),
-                new ArrayList<>(List.of(new Topping(TipoTopping.Aveia), new Fruta(TipoFruta.Banana))),
                 TipoTamanho.P
         );
 
@@ -222,13 +211,11 @@ public class PedidoTest{
         Shake shake1 = new Shake(new Base(TipoBase.Iorgute),
                 new Fruta(TipoFruta.Banana),
                 new Topping(TipoTopping.Aveia),
-                new ArrayList<>(List.of(new Topping(TipoTopping.Mel))),
                 TipoTamanho.G); //16
 
         Shake shake2 = new Shake(new Base(TipoBase.Sorvete),
                 new Fruta(TipoFruta.Morango),
                 new Topping(TipoTopping.Mel),
-                new ArrayList<>(List.of(new Topping(TipoTopping.Chocolate))),
                 TipoTamanho.M); // 106.5
 
         ItemPedido itemPedido1 = new ItemPedido(shake1, 1);
@@ -245,13 +232,11 @@ public class PedidoTest{
         Shake shake1 = new Shake(new Base(TipoBase.Iorgute),
                 new Fruta(TipoFruta.Banana),
                 new Topping(TipoTopping.Aveia),
-                new ArrayList<>(),
                 TipoTamanho.G); //15
 
         Shake shake2 = new Shake(new Base(TipoBase.Sorvete),
                 new Fruta(TipoFruta.Morango),
                 new Topping(TipoTopping.Mel),
-                new ArrayList<>(),
                 TipoTamanho.P); // 5
 
         ItemPedido itemPedido1 = new ItemPedido(shake1, 1);
